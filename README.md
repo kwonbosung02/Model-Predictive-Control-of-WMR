@@ -1,1 +1,1 @@
-# Model-Predictive-Control-of-WMR
+# Model Predictive Control of WMR
