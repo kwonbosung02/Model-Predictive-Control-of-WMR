@@ -8,9 +8,9 @@ X = horzcat(2*sin(t),-2*sin(t2));
 Y = horzcat(2*cos(t+pi)+2,-2*cos(t2+pi)-2);
 theta = horzcat(t,t2);
 
-%dX dY data
-dX = horzcat(2*cos(t),2*cos(t2));
-dY = horzcat(-2*sin(t+pi),-2*sin(t2+pi));
+%dX dY 
+dX = horzcat(2*cos(t),2*cos(t2))
+dY = horzcat(-2*sin(t+pi),-2*sin(t2+pi))
 
 data.x = X;
 data.y = Y;

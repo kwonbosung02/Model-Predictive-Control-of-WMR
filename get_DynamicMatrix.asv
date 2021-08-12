@@ -1,0 +1,9 @@
+function [A, B] = get_DynamicMatrix(simNum,idx,params)
+
+    A = eye(idx.n_dim);
+    A(idx.x, idx.theta) = -data.y(1,simNum+horNum-1) * sin(data.theta(1,simNum+horNum-1)) * params.dt;
+    A(idx.y, idx.theta) = data.y(1,simNum+horNum-1) * cos(data.theta(1,simNum+horNum-1)) * params.dt;
+    
+    B = [0 0 ; 0 0 ; 0 0];
+ 
+end

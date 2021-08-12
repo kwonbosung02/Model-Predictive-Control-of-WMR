@@ -1,9 +1,16 @@
-function ModelPredictiveController(states)
-
+function ModelPredictiveController(idx,params,states)
+    
+%states.x states.y states.theta
+    
     [idx,params] = get_params();
     
-    time = params.Tinitial : params.k : params.Tfinal;
-    print
+    %time = params.Tinitial : params.T : params.Tfinal;
+    
+    %for k = time
+    %    disp(k)
+        
+    %end
+    
     [A,B] = get_DynamicMatrix(idx,params);
     
    % [Acond, Bcond] = getCondensedMatrix(idx,params);

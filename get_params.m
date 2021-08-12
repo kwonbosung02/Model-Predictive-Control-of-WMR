@@ -3,12 +3,16 @@ function [idx,params] = get_params()
 idx.x = 1;
 idx.y = 2;
 idx.theta = 3;
-idx.v = 4;
-idx.w = 5;
+idx.v = 1;
+idx.w = 2;
 
 idx.n_states = 3;
 idx.n_inputs = 2;
 idx.n_hor = 13;
+idx.n_dim = 3;
+
+%iteration number
+params.iterNum = 1000;
 
 %Weight matrix
 params.Qunit = diag([1,1,0.5]);
@@ -17,7 +21,7 @@ params.Runit = 0.1*eye(2);
 %sampling period T
 params.T = 0.025;
 
-%start and and Time
+%start and end Time
 params.Tinitial = 0;
 params.Tfinal = 10;
 

@@ -1,28 +1,19 @@
-function ModelPredictiveController(states)
-
-    [idx,params] = get_params();
+function ModelPredictiveController(simNum,idx,params,states,data)
     
-    %time = params.Tinitial : params.T : params.Tfinal;
     
-    %for k = time
-    %    disp(k)
+    num.simNum = simNum;
+    
+    n_hor = idx.n_hor;
+    
+    for hornum = 1 : n_hor
         
-    %end
-    
-    [A,B] = get_DynamicMatrix(idx,params);
-    
-   % [Acond, Bcond] = getCondensedMatrix(idx,params);
-    
-   % [ H, J ] = getCostFunction(idx,params);
-    
-   % [ Aineq, Bineq] = getInequalityConstraint(idx,params);
+    num.horNum = hornum;    
+    [Adyn,Bdyn] = get_DynamicMatrix(num,idx,params,data);
     
     
-%t = 0:0.01:10
- %   x = 2 * sin
-  %  y = 2 - 2*cos
+    %A{k} = Adyn; 
+    %B{k} = Bdyn;
+    
+    end
 
-
-   % dx 
-    
 end
