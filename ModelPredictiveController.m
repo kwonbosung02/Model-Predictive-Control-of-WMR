@@ -9,11 +9,11 @@ function ModelPredictiveController(simNum,idx,params,states,data)
         
     num.horNum = hornum;    
     [Adyn,Bdyn] = get_DynamicMatrix(num,idx,params,data);
-    
-    
-    %A{k} = Adyn; 
-    %B{k} = Bdyn;
+    A{hornum} = Adyn; 
+    B{hornum} = Bdyn;
     
     end
+    
+    [Acond, Bcond] = get_CondensedMatrix(A,B,idx,params);
 
 end

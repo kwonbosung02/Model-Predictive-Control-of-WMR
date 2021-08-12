@@ -18,8 +18,8 @@ params.iterNum = 1000;
 params.Qunit = diag([1,1,0.5]);
 params.Runit = 0.1*eye(2);
 
-%sampling period T
-params.T = 0.025;
+%sampling period dt
+params.dt = 0.025;
 
 %start and end Time
 params.Tinitial = 0;
