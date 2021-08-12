@@ -2,13 +2,8 @@ function ModelPredictiveController(states)
 
     [idx,params] = get_params();
     
-    %time = params.Tinitial : params.T : params.Tfinal;
-    
-    %for k = time
-    %    disp(k)
-        
-    %end
-    
+    time = params.Tinitial : params.k : params.Tfinal;
+    print
     [A,B] = get_DynamicMatrix(idx,params);
     
    % [Acond, Bcond] = getCondensedMatrix(idx,params);

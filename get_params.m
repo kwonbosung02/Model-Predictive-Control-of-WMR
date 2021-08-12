@@ -14,8 +14,8 @@ idx.n_hor = 13;
 params.Qunit = diag([1,1,0.5]);
 params.Runit = 0.1*eye(2);
 
-%sampling time k
-params.k = 0.01;
+%sampling period T
+params.T = 0.025;
 
 %start and and Time
 params.Tinitial = 0;
@@ -24,5 +24,11 @@ params.Tfinal = 10;
 %start and end State
 params.startState = [0, -1, pi/2];
 params.endState = [0, 0, 0];
+
+%constraint
+params.v_min = -0.4;
+params.v_max = 0.4;
+params.w_min = -0.4;
+params.w_max = 0.4;
 
 end
