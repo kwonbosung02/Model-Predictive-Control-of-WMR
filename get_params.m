@@ -18,6 +18,9 @@ params.iterNum = 1000;
 params.Qunit = diag([1,1,0.5]);
 params.Runit = 0.1*eye(2);
 
+params.Qcond = cell(idx.n_hor);
+params.Rcond = cell(idx.n_hor);
+disp(params.Qcond)
 %sampling period dt
 params.dt = 0.025;
 
