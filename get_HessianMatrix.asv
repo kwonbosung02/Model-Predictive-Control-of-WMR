@@ -1,0 +1,11 @@
+function H = get_HessianMatrix(Bcond,idx,params,simNum)
+%    H = 2*(Bcond.T * simNum * params.Qcond * Bcond + params.Rcond);
+
+
+for i = 1 : idx.n_hor
+    for j = 1 : idx.n_hor
+
+    end
+end
+H = H + params.Rcond;
+end
