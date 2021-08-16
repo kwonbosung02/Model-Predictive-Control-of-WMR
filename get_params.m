@@ -18,9 +18,22 @@ params.iterNum = 1000;
 params.Qunit = diag([1,1,0.5]);
 params.Runit = 0.1*eye(2);
 
+%Condensed Weight matrix
 params.Qcond = cell(idx.n_hor);
 params.Rcond = cell(idx.n_hor);
-disp(params.Qcond)
+for i = 1 : idx.n_hor
+   for j = 1 : idx.n_hor
+       if i == j
+           params.Qcond{i,j} = params.Qunit;
+           params.Rcond{i,j} = params.Runit;
+       end
+       if i ~= j
+           params.Qcond{i,j} = 0;
+           params.Rcond{i,j} = 0;
+       end
+   end
+end
+
 %sampling period dt
 params.dt = 0.025;
 
