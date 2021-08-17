@@ -1,0 +1,10 @@
+function d = get_dMatrix(states, Acond,idx, params, num)
+x = states - data.x(num.simNum + num.horNum - 1);
+for i = 1 : idx.n_hor
+    for j = 1 : idx.n_hor
+        
+    end
+    
+end
+
+end

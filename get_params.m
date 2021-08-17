@@ -42,8 +42,8 @@ params.Tinitial = 0;
 params.Tfinal = 10;
 
 %start and end State
-params.startState = [0, -1, pi/2];
-params.endState = [0, 0, 0];
+params.startState = [0; -1; pi/2];
+params.endState = [0; 0; 0];
 
 %constraint
 params.v_min = -0.4;
