@@ -13,8 +13,11 @@ function ModelPredictiveController(simNum,idx,params,states,data)
     B{hornum} = Bdyn;
     
     end
+    
     [Acond, Bcond] = get_CondensedMatrix(A,B,idx,params);
-    H = get_HessianMatrix(Bcond,idx,params,num);
+    
+    %H = get_HessianMatrix(Bcond,idx,params,num);
     %f = get_fMatrix(Acond,Bcond,states,idx,params);
-    d = get_dMatrix(states, Acond,idx, params, num, data)
+    %d = get_dMatrix(states, Acond,idx, params, num, data)
+    
 end

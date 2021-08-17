@@ -9,8 +9,8 @@ for i = 1 : idx.n_hor
 end
 Acond = Acond';
     
-%get B condesed Matrix
-%set B value
+%get B condensed Matrix
+
 Bcond = cell(idx.n_hor,idx.n_hor);
 for i = 1 : idx.n_hor
     for j = 1 : idx.n_hor
@@ -23,7 +23,7 @@ for i = 1 : idx.n_hor
         
     end    
 end
-%set A value on B value
+
 Ax = 1;
 for j = 1 : idx.n_hor
     for i = 1 : idx.n_hor
