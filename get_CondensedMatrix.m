@@ -8,14 +8,15 @@ for i = 1 : idx.n_hor
     Acond{i} = Ax;
 end
 Acond = Acond';
-    
+Acond = cell2mat(Acond);
+
 %get B condensed Matrix
 
 Bcond = cell(idx.n_hor,idx.n_hor);
 for i = 1 : idx.n_hor
     for j = 1 : idx.n_hor
         if(i < j)
-            Bcond{i,j} = 0;
+            Bcond{i,j} = [0 0; 0 0; 0 0;];
         end
         if(i >= j)
             Bcond{i,j} = B{j};
@@ -37,5 +38,6 @@ for j = 1 : idx.n_hor
     end
     Ax = 1;
 end
+Bcond = cell2mat(Bcond);
 
 end

@@ -28,12 +28,13 @@ for i = 1 : idx.n_hor
            params.Rcond{i,j} = params.Runit;
        end
        if i ~= j
-           params.Qcond{i,j} = 0;
-           params.Rcond{i,j} = 0;
+           params.Qcond{i,j} = [0 0 0; 0 0 0; 0 0 0];
+           params.Rcond{i,j} = [0 0; 0 0];
        end
    end
 end
-
+params.Qcond = cell2mat(params.Qcond);
+params.Rcond = cell2mat(params.Rcond);
 %sampling period dt
 params.dt = 0.025;
 
