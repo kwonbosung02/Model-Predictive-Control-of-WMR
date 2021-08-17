@@ -19,7 +19,8 @@ function ModelPredictiveController(simNum,idx,params,states,data)
     disp(Bcond)
     
     H = get_HessianMatrix(Bcond,idx,params,num);
-    %f = get_fMatrix(Acond,Bcond,states,idx,params);
-    %d = get_dMatrix(states, Acond,idx, params, num, data)
+    f = get_fMatrix(Acond,Bcond,states,idx,params, data);
+    d = get_dMatrix(states, Acond,idx, params, num, data)
+    
     
 end

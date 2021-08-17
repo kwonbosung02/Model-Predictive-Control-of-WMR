@@ -1,11 +1,4 @@
-function f = get_fMatrix(Acond,Bcond,states,idx,params)
-x = Bcond';
+function f = get_fMatrix(Acond,Bcond,states,idx,params,data)
 
-for i = 1 : idx.n_hor
-    for j = 1 : idx.n_hor
-        x{i,j} = 2*x{i,j}*params.Qunit
-        
-    end
-end
-f = 0
+f = 2 * Bcond' * params.Qcond * Acond * (states-data.states)
 end

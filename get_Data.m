@@ -15,7 +15,7 @@ dY = horzcat(-2*sin(t+pi),-2*sin(t2+pi));
 data.x = X;
 data.y = Y;
 data.theta= theta;
-data.state = [X; Y; theta];
+data.states = [X; Y; theta];
 
 data.dx = dX;
 data.dy = dY;
