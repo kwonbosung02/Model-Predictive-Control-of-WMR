@@ -25,6 +25,6 @@ function states_ = ModelPredictiveController(simNum,idx,params,states,data)
     %fix required
     xN = get_NextStates(states,idx, params,u);
     
-    states_ = xN(1:3,:);
+    states_ = xN;
 
 end

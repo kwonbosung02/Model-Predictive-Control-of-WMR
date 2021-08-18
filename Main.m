@@ -9,6 +9,8 @@ states = params.startState;
 
 %iteration number
 iterNum = params.iterNum;
+plot(data.x,data.y);
+hold on
 
 for simNum  = 1 : iterNum
     
