@@ -10,7 +10,7 @@ end
 Acond = Acond';
 Acond = cell2mat(Acond);
 
-%get B condensed Matrix
+    %get B condensed Matrix
 
 Bcond = cell(idx.n_hor,idx.n_hor);
 for i = 1 : idx.n_hor
