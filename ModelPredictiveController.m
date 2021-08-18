@@ -18,13 +18,13 @@ function states_ = ModelPredictiveController(simNum,idx,params,states,data)
     
     H = get_HessianMatrix(Bcond,idx,params,num);
     f = get_fMatrix(Acond,Bcond,states,idx,params, num, data);
-    d = get_dMatrix(states, Acond,idx, params, num, data)
+    %d = get_dMatrix(states, Acond,idx, params, num, data)
     
     u = quadprog(H, f, params.quadProgA, params.quadProgb);
-    disp(u);
-    %fix required
-    xN = get_NextStates(states,idx, params,u);
     
-    states_ = xN;
+    
+    states_ = get_NextStates(states,idx, params,u);
+    
+    
 
 end

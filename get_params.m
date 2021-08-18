@@ -48,10 +48,11 @@ params.v_max = 0.4;
 params.w_min = -0.4;
 params.w_max = 0.4;
 
-%constraint Condensed Matrix
+%constraint Matrix
 %quadProg A 
 params.quadProgA = cell(idx.n_hor)
 Acont = vertcat(eye(2),-eye(2));
+
 for i = 1 : idx.n_hor
     for j = 1 : idx.n_hor
         if(i == j)
@@ -69,7 +70,7 @@ params.quadProgA = cell2mat(params.quadProgA);
 params.quadProgb = cell(idx.n_hor,1)
 for i = 1 : idx.n_hor
 
-    params.quadProgb{i,1} = [params.v_max; params.w_max; params.v_min; params.w_max];
+    params.quadProgb{i,1} = [params.v_max; params.w_max; -params.v_min; -params.w_min];
 end
 params.quadProgb = cell2mat(params.quadProgb);
 
