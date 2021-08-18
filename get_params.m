@@ -67,7 +67,7 @@ end
 params.quadProgA = cell2mat(params.quadProgA);
 
 %quadProg b
-params.quadProgb = cell(idx.n_hor,1)
+params.quadProgb = cell(idx.n_hor,1);
 for i = 1 : idx.n_hor
 
     params.quadProgb{i,1} = [params.v_max; params.w_max; -params.v_min; -params.w_min];

@@ -16,7 +16,6 @@ for simNum  = 1 : iterNum
     
      states = ModelPredictiveController(simNum,idx,params,states,data);
      plot(states(1),states(2),'-o')
-     hold on
      drawnow;
 end
 
