@@ -51,14 +51,15 @@ params.w_max = 0.4;
 %constraint Condensed Matrix
 %quadProg A 
 params.quadProgA = cell(idx.n_hor)
+Acont = vertcat(eye(2),-eye(2));
 for i = 1 : idx.n_hor
     for j = 1 : idx.n_hor
         if(i == j)
-        params.quadProgA{i,j} = eye(2);
+        params.quadProgA{i,j} = Acont;
         end
         
         if(i ~= j)
-        params.quadProgA{i,j} = [0 0; 0 0];
+        params.quadProgA{i,j} = [0 0; 0 0; 0 0; 0 0];
         end
     end
 end

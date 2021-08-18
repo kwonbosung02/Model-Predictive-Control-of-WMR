@@ -1,5 +1,5 @@
 function d = get_dMatrix(states, Acond,idx, params, num, data)
 
-d = (states-data.states)' * Acond' * params.Qcond * Acond * (states-data.states)
+d = (states-data.states(num.simNum))' * Acond' * params.Qcond * Acond * (states-data.states(num.simNum));
 
 end

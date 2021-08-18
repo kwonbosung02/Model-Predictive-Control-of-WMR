@@ -10,12 +10,12 @@ states = params.startState;
 %iteration number
 iterNum = params.iterNum;
 
-
 for simNum  = 1 : iterNum
     
-     ModelPredictiveController(simNum,idx,params,states,data);
-     
-    
+     states = ModelPredictiveController(simNum,idx,params,states,data);
+     plot(states(1),states(2),'-o')
+     hold on
+     drawnow;
 end
 
 
