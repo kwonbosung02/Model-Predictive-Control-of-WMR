@@ -20,7 +20,8 @@ dY = horzcat(-2*sin(t+pi),-2*sin(t2+pi));
 % dY = cos(t);
 % plot(X,Y);
 % %=====================================
-
+plot(X,Y)
+grid on
 data.x = X;
 data.y = Y;
 

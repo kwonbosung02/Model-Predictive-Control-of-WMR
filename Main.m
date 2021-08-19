@@ -13,7 +13,8 @@ states = params.startState;
 iterNum = params.iterNum;
 
 plot(data.x,data.y);
-    
+
+grid on 
 hold on
 
 for simNum  = 1 : iterNum %k

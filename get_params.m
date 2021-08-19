@@ -12,10 +12,10 @@ idx.n_hor = 21;
 idx.n_dim = 3;
 
 %iteration number
-params.iterNum = 1230;
+params.iterNum = 1236;
 
 %Weight matrix
-params.Qunit = ([1,1,0.5]);
+params.Qunit = [1,1,0.33];
 params.Runit = [1e-1,1e-1];
 
 %Condensed Weight matrix
@@ -24,7 +24,7 @@ params.Rcond = diag(repmat(params.Runit,1,idx.n_hor));
 
 
 %sampling period dt
-params.dt = 0.025;
+params.dt = 0.03;
 
 %start and end State
 params.startState = [0; -1; pi/2];
