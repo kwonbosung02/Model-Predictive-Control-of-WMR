@@ -20,15 +20,16 @@ hold on
 for simNum  = 1 : iterNum %k
     
      states = ModelPredictiveController(simNum,idx,params,states,data);
-
+    
      plot(states(idx.x),states(idx.y),'-o')
-
+     out{simNum} = states;
+     
      drawnow;   
      
 
      
 end
-
+out = cell2mat(out);
 
 
 end
