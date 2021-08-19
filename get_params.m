@@ -8,15 +8,15 @@ idx.w = 2;
 
 idx.n_states = 3;
 idx.n_inputs = 2;
-idx.n_hor = 5;
+idx.n_hor = 21;
 idx.n_dim = 3;
 
 %iteration number
-params.iterNum = 1000;
+params.iterNum = 1230;
 
 %Weight matrix
-params.Qunit = ([3,3,3]);
-params.Runit = [1e-2,1e-2];
+params.Qunit = ([1,1,0.5]);
+params.Runit = [1e-1,1e-1];
 
 %Condensed Weight matrix
 params.Qcond = diag(repmat(params.Qunit,1,idx.n_hor));
@@ -24,17 +24,17 @@ params.Rcond = diag(repmat(params.Runit,1,idx.n_hor));
 
 
 %sampling period dt
-params.dt = 0.01;
+params.dt = 0.025;
 
 %start and end State
-params.startState = [0; 0; 0];
+params.startState = [0; -1; pi/2];
 params.endState = [0; 0; 0];
 
 %constraint
-params.v_min = -100;
-params.v_max = 100;
-params.w_min = -100;
-params.w_max = 100;
+params.v_min = -4;
+params.v_max = 4;
+params.w_min = -4;
+params.w_max = 4;
 
 %constraint Matrix
 %quadProg A 

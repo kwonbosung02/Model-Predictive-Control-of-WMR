@@ -21,11 +21,10 @@ for simNum  = 1 : iterNum
      states = ModelPredictiveController(simNum,idx,params,states,data);
 
      plot(states(idx.x),states(idx.y),'-o')
+     quiver(states(idx.x),Y,U,V)
+     drawnow;   
      
-     h= quiver( states(idx.x) , states(idx.y) , data.dx(1,simNum) , data.dy(1,simNum),0,'-')
-     
-     draw
-     
+
      
 end
 

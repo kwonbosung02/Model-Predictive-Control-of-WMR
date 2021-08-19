@@ -16,17 +16,15 @@ plot(data.x,data.y);
     
 hold on
 
-for simNum  = 1 : iterNum
+for simNum  = 1 : iterNum %k
     
      states = ModelPredictiveController(simNum,idx,params,states,data);
 
      plot(states(idx.x),states(idx.y),'-o')
+
+     drawnow;   
      
-     
-plot(data.x,data.y);
-     
-     pause(0.05)
-     
+
      
 end
 

@@ -10,9 +10,10 @@ A = eye(idx.n_states);
 %Value A
 %A(idx.x, idx.theta) = -data.v(1,simNum+horNum-1) * sin(states(idx.theta,1)) * params.dt;
 %A(idx.y, idx.theta) = data.v(1,simNum+horNum-1) * cos(states(idx.theta,1)) * params.dt;
+%A(idx.x, idx.theta) = -data.dy(1,simNum+horNum-1) * params.dt;
+%A(idx.y, idx.theta) = data.dx(1,simNum+horNum-1) * params.dt;
 A(idx.x, idx.theta) = -data.dy(1,simNum+horNum-1) * params.dt;
 A(idx.y, idx.theta) = data.dx(1,simNum+horNum-1) * params.dt;
-
 %Value B
 B = zeros(idx.n_states,idx.n_inputs);
 B(idx.x, idx.v) = cos(data.theta(1,simNum+horNum-1)) * params.dt;

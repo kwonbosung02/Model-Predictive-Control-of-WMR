@@ -11,6 +11,16 @@ theta = horzcat(t,t2);
 dX = horzcat(2*cos(t),2*cos(t2));
 dY = horzcat(-2*sin(t+pi),-2*sin(t2+pi));
 
+% %================Test=================
+% t = 0 : 0.01 : 2*pi;
+% theta = t;
+% X = cos(t);
+% Y = sin(t)+1;
+% dX = -sin(t);
+% dY = cos(t);
+% plot(X,Y);
+% %=====================================
+
 data.x = X;
 data.y = Y;
 
