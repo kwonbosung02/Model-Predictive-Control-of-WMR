@@ -1,7 +1,6 @@
 function states_ = ModelPredictiveController(simNum,idx,params,states,data)
     
-    
-    num.simNum = simNum;
+    num.simNum = simNum; %k
     
     n_hor = idx.n_hor;
     

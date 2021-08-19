@@ -2,10 +2,10 @@ function xN = get_NextStates(states,idx, params, u)
 
 xN = [0; 0; 0];
 %x
-xN(1) = states(1) + params.dt * u(1) * cos(states(3));
+xN(idx.x) = states(idx.x) + params.dt * u(idx.v) * cos(states(idx.theta));
 %y
-xN(2) = states(2) + params.dt * u(1) * sin(states(3));
+xN(idx.y) = states(idx.y) + params.dt * u(idx.v) * sin(states(idx.theta));
 %theta
-xN(3) = states(3) + params.dt * u(2);
+xN(idx.theta) = states(idx.theta) + params.dt * u(idx.w);
 
 end

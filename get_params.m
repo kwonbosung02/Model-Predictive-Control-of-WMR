@@ -50,7 +50,7 @@ params.w_max = 0.4;
 
 %constraint Matrix
 %quadProg A 
-params.quadProgA = cell(idx.n_hor)
+params.quadProgA = cell(idx.n_hor);
 Acont = vertcat(eye(2),-eye(2));
 
 for i = 1 : idx.n_hor

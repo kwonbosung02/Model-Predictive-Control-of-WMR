@@ -5,7 +5,7 @@ horNum = num.horNum;
 
 A = eye(idx.n_states);
 
-v = sqrt(data.dy(1,simNum+horNum-1)^2 + data.dx(1,simNum+horNum-1)^2);
+%v = sqrt(data.dy(1,simNum+horNum-1)^2 + data.dx(1,simNum+horNum-1)^2);
 
 %Value A
 %A(idx.x, idx.theta) = -v * sin(data.theta(1,simNum+horNum-1)) * params.dt;
