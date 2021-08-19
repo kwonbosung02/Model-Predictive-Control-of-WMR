@@ -30,6 +30,10 @@ for simNum  = 1 : iterNum %k
      
 end
 out = cell2mat(out);
-
+close all
+plot(data.x,data.y);
+grid on
+hold on
+plot(out(1,:),out(2,:));
 
 end
