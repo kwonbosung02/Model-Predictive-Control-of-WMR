@@ -22,10 +22,9 @@ for simNum  = 1 : iterNum
 
      plot(states(idx.x),states(idx.y),'-o')
      
+     h= quiver( states(idx.x) , states(idx.y) , data.dx(1,simNum) , data.dy(1,simNum),0,'-')
      
-plot(data.x,data.y);
-     
-     pause(0.05)
+     draw
      
      
 end

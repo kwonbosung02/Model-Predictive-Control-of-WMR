@@ -8,21 +8,33 @@ idx.w = 2;
 
 idx.n_states = 3;
 idx.n_inputs = 2;
-idx.n_hor = 5;
+idx.n_hor = 13;
 idx.n_dim = 3;
 
 %iteration number
 params.iterNum = 1000;
 
 %Weight matrix
-params.Qunit = ([3,3,3]);
-params.Runit = [1e-2,1e-2];
+params.Qunit = diag([1,1,1]);
+params.Runit = 1e-2*eye(2);
 
 %Condensed Weight matrix
-params.Qcond = diag(repmat(params.Qunit,1,idx.n_hor));
-params.Rcond = diag(repmat(params.Runit,1,idx.n_hor));
-
-
+params.Qcond = cell(idx.n_hor);
+params.Rcond = cell(idx.n_hor);
+for i = 1 : idx.n_hor
+   for j = 1 : idx.n_hor
+       if i == j
+           params.Qcond{i,j} = params.Qunit;
+           params.Rcond{i,j} = params.Runit;
+       end
+       if i ~= j
+           params.Qcond{i,j} = [0 0 0; 0 0 0; 0 0 0];
+           params.Rcond{i,j} = [0 0; 0 0];
+       end
+   end
+end
+params.Qcond = cell2mat(params.Qcond);
+params.Rcond = cell2mat(params.Rcond);
 %sampling period dt
 params.dt = 0.01;
 
