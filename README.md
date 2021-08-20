@@ -1,4 +1,4 @@
-# Model Predictive Control of WMR
+##### Model Predictive Control of WMR
 refer to : http://www.ece.ufrgs.br/~fetter/mechrob04_553.pdf
 
 #### Trajectory
